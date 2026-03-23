@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume AI - Future of Hiring</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background Shapes for Premium feel -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+
+        <div id="loading" class="loading-overlay">
+            <div class="spinner"></div>
+            <p style="font-weight: 700; font-size: 1.2rem;">AI is analyzing your future...</p>
+        </div>
+
+        <header>
+            <div class="logo">RESUME.AI</div>
+            <nav>
+                <button id="nav-analyze" class="nav-btn active">Analyze</button>
+                <button id="nav-build" class="nav-btn">Build</button>
+            </nav>
+        </header>
+
+        <!-- Analyze Section -->
+        <main id="section-analyze" class="content-section active">
+            <div class="hero-content">
+                <h1 class="hero-title">The first resume analyzer that works for you.</h1>
+                <p class="hero-subtitle">Upload your PDF and get instant, industry-leading feedback to land your dream role.</p>
+                
+                <input type="file" id="file-input" accept=".pdf" style="display: none;">
+                <button id="upload-btn" class="btn-pill">Analyze Resume</button>
+                
+                <div id="analyze-result" class="result-display" style="display: none;"></div>
+            </div>
+
+            <div class="desktop-visual">
+                <div class="visual-card">
+                    <div class="visual-blob">
+                        <div class="visual-inner">
+                            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <polyline points="16 11 18 13 22 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Build Section -->
+        <main id="section-build" class="content-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Build your professional presence.</h1>
+                <p class="hero-subtitle">Input your career details and let our AI craft a world-class resume for you in seconds.</p>
+                
+                <div class="form-container" style="text-align: left;">
+                    <div class="input-group" style="display: flex; gap: 20px;">
+                        <input type="text" id="name" class="input-field" placeholder="Full Name">
+                        <input type="text" id="job-title" class="input-field" placeholder="Job Title (e.g. Software Engineer)">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="contact" class="input-field" placeholder="Phone | Email | Location">
+                    </div>
+                    <div class="input-group" style="display: flex; gap: 20px;">
+                        <textarea id="education" class="input-field" placeholder="Education (Degree, University, Dates)"></textarea>
+                        <textarea id="skills" class="input-field" placeholder="Core Skills (Separated by commas)"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="experience" class="input-field" placeholder="Work History"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="projects" class="input-field" placeholder="Key Projects"></textarea>
+                    </div>
+                    
+                    <button id="generate-btn" class="btn-pill">Generate Resume</button>
+                    
+                    <div id="build-result-container" style="display: none; margin-top: 30px;">
+                        <h3 style="margin-bottom: 15px; font-weight: 800;">Preview</h3>
+                        <div id="build-result" class="result-display"></div>
+                        <button id="download-btn" class="btn-pill btn-secondary">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="desktop-visual">
+                <div class="visual-card" style="background: #F0FFF4;">
+                    <div class="visual-blob" style="background: var(--primary-green);">
+                        <div class="visual-inner">
+                            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
